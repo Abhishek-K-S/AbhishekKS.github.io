@@ -1,0 +1,288 @@
+body{
+    background-color:rgb(255, 255, 255);
+    margin:0px;
+    padding:0px;
+    font-size: 17px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.light-bg{
+    color: rgb(11, 11, 14);
+}
+
+.dark-bg{
+    color: white;
+}
+
+nav{
+    height:40px;
+    width:100%;
+    background-color: transparent;
+    position: fixed;
+    top: 0px;
+    z-index: 9999;
+}
+
+#first-div{
+    background-image:url(../img/globe.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;   
+    width:100%;
+    padding-top: 60px;
+}
+
+#third-div{
+    background-color:rgba(48, 241, 48, 0.568);
+}
+
+button{
+    background-color: rgba(75, 9, 255, 0.774);
+    color: white;
+    padding: 8px 13px;
+    margin:auto 0 auto 15px;
+    border-style: hidden;
+    border-radius: 4px;
+}
+
+.smaller-side{
+    width: 35%;
+}
+
+.larger-side{    
+    width: 64%;
+}
+
+.floatL{
+    clear: both;
+    float: left;
+}
+
+.floatR{
+    clear:both;
+    float: right;
+}
+
+.alignment{
+    margin: 0 10%;
+    padding: 40px 0;
+}
+
+.no-padding{
+    padding:0px;
+}
+
+.centre-text{
+    text-align:center;
+}
+
+.token{
+    margin:0 auto;
+    width: 200px;
+    padding:0 5px;
+}
+
+.block{
+    display: block;
+}
+
+.ib{
+    display: inline-block;
+}
+
+.line-height{
+    line-height: 80px;
+}
+
+.lh-small{
+    line-height: 40px;
+}
+
+.sub{
+    margin:40px 0;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+
+.text{
+    width:80%;
+    height:42px;
+    border: 2px groove;
+    border-radius: 3px;
+    border-color:rgba(255, 255, 255, 0.3);
+    background-color:rgb(46, 46, 46);
+    color: white;
+    padding: 8px;
+}
+
+.circle{
+    border-radius: 50%;
+}
+
+.sh{
+    width:100%;
+}
+.sh img{
+    width: 100%;
+    
+}
+.auto-margin{
+    margin:0 auto;
+}
+
+.hide{
+    display: none;
+}
+
+.next, .prev{
+    cursor: pointer;
+    width:40px;
+    height:40px;
+    font-size: 30px;
+    position: absolute;
+    top:50%;
+    margin-top:-20px;
+    color:white;
+    opacity:0.4;
+}
+
+.next{
+    right:0;
+}
+
+.prev{
+    left:0;
+}
+.next:hover,.prev:hover, .fade{
+    animation-name: fade;
+    animation-duration: 300ms;
+    animation-timing-function: ease-out;
+    opacity:1;
+}
+
+.clrgain{
+    animation-name:colorgain;
+    animation-timing-function: ease-in;
+    animation-duration: 0.2s;
+}
+
+.clrfade{
+    animation-name:colorfade;
+    animation-timing-function: ease-out;
+    animation-duration: 0.2s;
+}
+
+@keyframes fade{
+    from{opacity:0.4;}
+    to{opacity:1;}
+}
+@keyframes colorgain{
+    from{background-color: rgba(255, 255, 255, 0);}
+    to{background-color: rgba(80, 80, 80, 0.8);}
+}
+@keyframes colorfade{
+    from{background-color: rgba(80, 80, 80, 0.8);}
+    to{background-color: rgba(255, 255, 255, 0);}
+}
+
+.caption{
+    color: white;
+    padding: 8px 10px;
+    position: absolute;
+    font-size: 20px;
+    bottom: 10px; 
+    font-weight: 800px;
+    text-align: center;
+    width: 100%;
+}
+video{
+    border:0px;
+    border-radius: 4px;
+}
+
+*:focus{
+    outline:none;
+}
+
+input:focus, textarea:focus{
+    border-color:rgba(97, 244, 255, 0.6);
+}
+
+footer{
+    background-color: rgb(26, 26, 26);
+    height: 60px;
+    position:relative;
+}
+
+#footerlogo{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#footerlogo a{
+    position:relative;
+
+    width:40px; height:40px;
+    border-radius: 50%;
+    background-color: rgb(53, 53, 53);
+    color: white;
+
+    transition: all 0.3s;
+    transition-delay:80ms;
+
+    text-decoration: none;
+    margin:0 20px;
+
+}
+
+#footerlogo a::before{
+    content:"";
+    
+    position: absolute;
+    top:0;
+    left:0;
+    transform: translate(-50%, -50%);
+
+    background-color:#ff5722;
+    width:100%; height: 100%;
+    filter: blur(10px);
+    transform: scale(0.3);
+
+    transition: all 0.3s;
+    transition-delay:80ms;
+    z-index:-1;
+}
+
+#footerlogo a:hover::before{
+    transform: scale(1.05);
+}
+
+#footerlogo a:hover{
+    color:#ff5722;
+}
+
+a i{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.fa{
+    font-size: 35px;
+    text-align: center;
+}
