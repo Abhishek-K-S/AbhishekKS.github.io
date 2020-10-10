@@ -15,10 +15,11 @@
         <nav class="dark-bg lh-small" id="navbar">
             <div class="alignment no-padding">
                 <span class="ib"><img src="./img/logo/mainlogo.png" style="height:40px; padding:5px 0;"></span>
-
-                <span class="floatR">have a acoount? >
+                <span class="ib floatR">
+                    <span class=" ib" id="acc">have a acoount? ></span>
                     <button>Log In</button>
                 </span>
+                
             </div>
         </nav>
 
@@ -34,6 +35,7 @@
                 </span>
             </div>
         </div>
+        <span id="check">0</span>
 
         <div>
             <div class="alignment flex light-bg" >
@@ -132,7 +134,7 @@
             </div>
         </div>
 
-        <div style="background-color: rgb(46, 46, 46);">
+        <div style="background-color: rgb(36, 36, 36);">
             <div class="alignment dark-bg">
                 <div class="lh-small centre-text">
                     <img class=" circle" style="width:20%; max-width: 150px; "src="./img/logo/feedback logo.png">
@@ -156,13 +158,30 @@
         </div>
         
         <footer >
-            <span id="footerlogo">
-                <span class="dark-bg">Follow us on:(hover over icons)</span> 
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-            </span>
+            <div class="dark-bg centre-text">Follow us on:(hover over icons)</div> 
+            <div style="padding: 10px 0; position:relative; height:60px;">
+                <span id="footerlogo">
+                
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                </span>
+            </div>
         </footer>
+
+        <script>
+
+            setVisible();
+            function setVisible(){
+                if(window.innerWidth<500){
+                    document.getElementById("acc").style.display="none";
+                }
+                if(window.innerwidth>=500){
+                    document.getElementById("acc").style.display="inline-block";
+                }
+            }
+
+        </script>
     </body>
 </html>
